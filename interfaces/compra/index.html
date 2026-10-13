@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tienda · Linde</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">L</span>Linde</div>
+    <span class="header-label">Tienda</span>
+    <nav class="shop-nav" aria-label="Tienda">
+      <button type="button" class="nav-button" data-view="catalogo">Catálogo</button>
+      <button type="button" class="nav-button" data-view="carrito">Carrito <span class="cart-count" id="cart-count">0</span></button>
+    </nav>
+  </header>
+  <main class="page">
+    <section id="catalogo" class="view">
+      <div class="catalog-heading"><div><p class="eyebrow">Objetos para habitar</p><h1 tabindex="-1">Un detalle que hace hogar.</h1><p class="lead">Diseño simple para acompañar tus espacios de todos los días.</p></div><span class="collection-note">Colección hogar / 01</span></div>
+      <article class="catalog-product card">
+        <div class="product-scene"><span class="scene-tag">Iluminación</span><img src="alba.svg" alt="Lámpara Alba con pantalla color crema y base verde oliva" width="620" height="510"></div>
+        <div class="catalog-copy"><span class="badge">Disponible</span><p class="eyebrow product-kicker">Luz cálida, diseño simple</p><h2>Lámpara de mesa Alba</h2><p class="muted">Una luz suave para tus momentos de lectura. Su base de cerámica y pantalla de tela aportan calidez a cualquier rincón.</p><p class="price">$20.000 <span>CLP</span></p><dl class="price-summary catalog-summary"><div><dt>Subtotal</dt><dd>$20.000</dd></div></dl><div class="product-actions"><button class="button" type="button" data-view="detalle">Ver producto <span aria-hidden="true">→</span></button><button class="button secondary" type="button" id="catalog-add">Agregar</button></div><p class="product-small muted">Una pieza por pedido · Color oliva</p></div>
+      </article>
+    </section>
+
+    <section id="detalle" class="view" hidden>
+      <button class="text-button back-link" type="button" data-view="catalogo">← Volver al catálogo</button>
+      <div class="detail-grid"><div class="product-scene detail-scene"><img src="alba.svg" alt="Lámpara de mesa Alba, pantalla de tela crema y base de cerámica oliva" width="620" height="510"></div><div class="detail-copy"><p class="eyebrow">Iluminación / Colección hogar</p><h1 tabindex="-1">Lámpara de mesa Alba</h1><p class="price">$20.000 <span>CLP</span></p><p class="muted">El equilibrio entre una base de cerámica de acabado mate y una pantalla de tela que filtra la luz. Ideal para una mesa de noche o un rincón de lectura.</p><dl class="specifications"><div><dt>Color</dt><dd>Oliva y crema</dd></div><div><dt>Medidas</dt><dd>38 cm de alto × 24 cm de diámetro</dd></div><div><dt>Incluye</dt><dd>Ampolleta LED de luz cálida</dd></div><div><dt>Cantidad</dt><dd>1 unidad</dd></div></dl><button class="button wide" type="button" id="detail-add">Añadir al carrito</button><p class="muted product-small">Disponible para tu pedido</p></div></div>
+    </section>
+
+    <section id="carrito" class="view" hidden>
+      <p class="eyebrow">Tu selección</p><h1 tabindex="-1">Carrito</h1><p class="lead">Revisa tu producto antes de continuar.</p>
+      <div id="cart-filled" class="cart-layout" hidden><article class="card cart-item"><div class="cart-image"><img src="alba.svg" alt="Lámpara Alba" width="160" height="145"></div><div class="cart-description"><p class="eyebrow">Iluminación</p><h2>Lámpara de mesa Alba</h2><p class="muted">Oliva y crema · Cantidad: 1</p><button class="text-button remove-button" type="button" id="remove-item">Eliminar</button></div><strong class="item-price">$20.000</strong></article><aside class="card order-summary"><h2>Resumen del pedido</h2><dl class="price-summary"><div><dt>Subtotal</dt><dd>$20.000</dd></div></dl><button class="button wide" type="button" data-view="pago">Continuar al pago <span aria-hidden="true">→</span></button></aside></div>
+      <div id="cart-empty" class="card empty-cart"><div class="empty-icon" aria-hidden="true">◇</div><h2>Tu carrito está vacío</h2><p class="muted">Encuentra un detalle para tu hogar en nuestro catálogo.</p><button class="button" type="button" data-view="catalogo">Ir al catálogo</button></div>
+      <button class="text-button back-link" type="button" data-view="catalogo" id="keep-shopping" hidden>← Seguir comprando</button>
+    </section>
+
+    <section id="pago" class="view" hidden>
+      <button class="text-button back-link" type="button" data-view="carrito">← Volver al carrito</button><p class="eyebrow">Último paso</p><h1 tabindex="-1">Completa tu compra</h1><p class="lead">Revisa el pedido e ingresa los datos de pago.</p>
+      <div class="checkout-layout"><div><section class="card delivery-address"><div class="section-number" aria-hidden="true">1</div><div><h2>Dirección de entrega</h2><p>Clara Araya · Los Alerces 184<br><span class="muted">Providencia, Región Metropolitana</span></p><span class="address-caption">Dirección ficticia para esta compra</span></div></section><form id="payment-form" class="card payment-card" novalidate autocomplete="off"><div class="form-title"><span class="section-number" aria-hidden="true">2</span><h2>Datos de pago</h2></div><p class="payment-note">Compra ficticia, sin cargos. Utiliza estos datos de ejemplo:<br><strong>4242 4242 4242 4242</strong> · Vencimiento <strong>12/30</strong> · CVC <strong>123</strong>.<br>No ingreses datos reales. La información no se envía ni se guarda.</p><div id="payment-message" class="error" role="alert" hidden></div><div class="field"><label for="card-number">Número de tarjeta</label><input id="card-number" name="card-number" type="text" inputmode="numeric" autocomplete="off" maxlength="23" placeholder="0000 0000 0000 0000"></div><div class="payment-fields"><div class="field"><label for="card-expiry">Vencimiento</label><input id="card-expiry" name="card-expiry" type="text" inputmode="numeric" autocomplete="off" maxlength="5" placeholder="MM/AA"></div><div class="field"><label for="card-cvc">CVC</label><input id="card-cvc" name="card-cvc" type="text" inputmode="numeric" autocomplete="off" maxlength="4" placeholder="000"></div></div><button class="button wide" type="submit">Pagar $24.990</button></form></div><aside class="card order-summary checkout-summary"><h2>Tu pedido</h2><div class="summary-product"><img src="alba.svg" alt="" width="80" height="80"><div><strong>Lámpara de mesa Alba</strong><p class="muted">Oliva y crema · 1 unidad</p></div></div><dl class="price-summary"><div><dt>Subtotal</dt><dd>$20.000</dd></div><div><dt>Envío</dt><dd>$4.990</dd></div><div class="total-row"><dt>Total</dt><dd>$24.990</dd></div></dl><p class="muted product-small">Valores expresados en pesos chilenos.</p></aside></div>
+    </section>
+
+    <section id="confirmacion" class="view" hidden>
+      <article class="card confirmation-card"><div class="success-mark" aria-hidden="true">✓</div><p class="eyebrow">Pedido LD-1042</p><h1 tabindex="-1">Tu compra está lista.</h1><p class="lead">El pedido de tu lámpara de mesa Alba se completó correctamente.</p><div class="confirmation-detail"><span>Total de la compra</span><strong>$24.990</strong></div><p class="muted">Esta compra es ficticia. No se realizó ningún cargo.</p><button class="button" type="button" id="finish-shopping">Volver a la tienda</button></article>
+    </section>
+  </main>
+  <footer class="footer"><span>Linde · Objetos para tu día a día</span><span>Diseño que se siente en casa.</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>

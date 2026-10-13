@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Espacios · Linde</title>
+  <style>
+    * {
+      box-sizing:border-box
+    }
+    
+    body {
+      margin:0;
+      background:#f5f6f3;
+      color:#1e302b;
+      font-family:'Segoe UI',Arial,sans-serif
+    }
+    
+    header {
+      height:88px;
+      background:#fff;
+      border-bottom:1px solid #dde4de;
+      padding:0 max(40px,calc((100vw - 1160px)/2));
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-size:24px;
+      font-weight:650
+    }
+    
+    .mark {
+      width:35px;
+      height:35px;
+      border-radius:10px;
+      background:#24644c;
+      color:white;
+      display:grid;
+      place-items:center
+    }
+    
+    main {
+      max-width:1160px;
+      margin:auto;
+      padding:64px 0
+    }
+    
+    h1 {
+      font-size:38px;
+      letter-spacing:-1px;
+      margin:0 0 15px
+    }
+    
+    p {
+      color:#63736b;
+      line-height:1.6
+    }
+    
+    .eyebrow {
+      font-size:11px;
+      color:#24644c;
+      letter-spacing:1.7px;
+      text-transform:uppercase;
+      font-weight:650;
+      margin:0 0 16px
+    }
+    
+    .spaces {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      margin-top:40px
+    }
+    
+    a {
+      padding:30px;
+      background:white;
+      border:1px solid #dde4de;
+      border-radius:16px;
+      color:inherit;
+      text-decoration:none;
+      display:block
+    }
+    
+    a:hover {
+      border-color:#24644c
+    }
+    
+    a:focus-visible {
+      outline:3px solid #96bda7;
+      outline-offset:4px
+    }
+    
+    h2 {
+      font-size:23px;
+      margin:20px 0 8px
+    }
+    
+    a p {
+      margin:0 0 25px;
+      font-size:14px
+    }
+    
+    .icon {
+      width:40px;
+      height:40px;
+      border-radius:10px;
+      background:#eaf1eb;
+      color:#24644c;
+      display:grid;
+      place-items:center;
+      font-size:22px
+    }
+    
+    .entry {
+      font-size:14px;
+      font-weight:600;
+      color:#24644c
+    }
+    
+    .arrow {
+      float:right
+    }
+    
+    footer {
+      max-width:1160px;
+      margin:0 auto;
+      padding:23px 0;
+      border-top:1px solid #dde4de;
+      font-size:12px;
+      color:#63736b
+    }
+    
+    @media(max-width:1240px) {
+      main {
+        padding:42px 25px
+      }
+      footer {
+        margin:0 25px
+      }
+    }
+    
+    @media(max-width:650px) {
+      .spaces {
+        grid-template-columns:1fr
+      }
+      h1 {
+        font-size:30px
+      }
+    }
+      </style>
+</head>
+<body>
+  <header><span class="mark">L</span>Linde</header>
+  <main>
+    <p class="eyebrow">Un lugar para tu día a día</p>
+    <h1>Elige tu espacio.</h1>
+    <p>Accede a los servicios de Linde.</p>
+    <div class="spaces">
+      <a href="interfaces/registro/index.html"><span class="icon" aria-hidden="true">＋</span><h2>Registro de usuario</h2><p>Crea una cuenta con tus datos personales.</p><span class="entry">Abrir registro <span class="arrow" aria-hidden="true">→</span></span></a>
+      <a href="interfaces/compra/index.html"><span class="icon" aria-hidden="true">◇</span><h2>Compra en línea</h2><p>Encuentra un detalle para tu hogar.</p><span class="entry">Abrir tienda <span class="arrow" aria-hidden="true">→</span></span></a>
+      <a href="interfaces/reserva/index.html"><span class="icon" aria-hidden="true">◷</span><h2>Reserva de hora</h2><p>Organiza tu próxima sesión.</p><span class="entry">Abrir agenda <span class="arrow" aria-hidden="true">→</span></span></a>
+      <a href="interfaces/configuracion/index.html"><span class="icon" aria-hidden="true">☷</span><h2>Configuración de cuenta</h2><p>Elige tus preferencias personales.</p><span class="entry">Abrir mi cuenta <span class="arrow" aria-hidden="true">→</span></span></a>
+    </div>
+  </main>
+  <footer>Linde · Espacios</footer>
+</body>
+</html>

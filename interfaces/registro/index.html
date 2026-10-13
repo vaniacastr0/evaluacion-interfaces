@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Crear cuenta · Linde</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">L</span>Linde</div>
+    <span class="header-label">Registro</span>
+    <span class="header-end">Tu espacio personal</span>
+  </header>
+  <main class="page">
+    <div class="registration-layout" id="registration-view">
+      <section class="intro" aria-labelledby="intro-title">
+        <p class="eyebrow">Bienvenido a Linde</p>
+        <h1 id="intro-title">Un espacio<br>para lo cotidiano.</h1>
+        <p class="lead">Crea tu cuenta y reúne tus preferencias en un solo lugar.</p>
+        <div class="intro-illustration" aria-hidden="true">
+          <div class="illustration-ring"></div>
+          <div class="illustration-sheet">
+            <div class="illustration-avatar">L</div>
+            <div class="illustration-line wide"></div>
+            <div class="illustration-line"></div>
+            <div class="illustration-chip"><span>✓</span><span>✓</span><span>✓</span></div>
+          </div>
+          <div class="illustration-leaf"></div>
+        </div>
+        <p class="intro-caption">Todo empieza con una cuenta.</p>
+      </section>
+      <section class="card form-card" aria-labelledby="form-title">
+        <p class="eyebrow">Tu nueva cuenta</p>
+        <h2 id="form-title">Registrarse</h2>
+        <p class="muted form-description">Completa tus datos para comenzar.</p>
+        <div id="form-message" class="notice" role="alert"></div>
+        <aside id="password-guide" class="password-guide" aria-labelledby="password-guide-title" hidden>
+          <h3 id="password-guide-title">Requisitos de contraseña</h3>
+          <ul><li>Mínimo 8 caracteres</li><li>Al menos una letra mayúscula</li><li>Al menos un número</li></ul>
+        </aside>
+        <form id="registration-form" novalidate>
+          <div class="field">
+            <label for="full-name">Nombre</label>
+            <input id="full-name" name="name" type="text" autocomplete="name" placeholder="Tu nombre" required>
+          </div>
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="nombre@ejemplo.com" required>
+          </div>
+          <div class="field">
+            <label for="password">Contraseña</label>
+            <input id="password" name="password" type="password" autocomplete="new-password" required>
+          </div>
+          <button type="submit" class="button submit-button" id="submit-button">Crear cuenta</button>
+        </form>
+        <p class="form-footnote">Usa información ficticia para completar este formulario.</p>
+      </section>
+    </div>
+    <section class="card confirmation-card" id="confirmation-view" aria-labelledby="confirmation-title" hidden>
+      <div class="success-mark" aria-hidden="true">✓</div>
+      <p class="eyebrow">Ya eres parte de Linde</p>
+      <h1 id="confirmation-title" tabindex="-1">Tu cuenta fue creada</h1>
+      <p id="confirmation-greeting"></p>
+      <div class="account-summary"><span class="muted">Correo de la cuenta</span><strong id="confirmation-email"></strong></div>
+      <p class="confirmation-note muted">La creación de tu cuenta se completó correctamente.</p>
+    </section>
+  </main>
+  <footer class="footer"><span>Linde</span><span>Un lugar para tus preferencias.</span></footer>
+</body>
+</html>
